@@ -8,10 +8,12 @@
   <col width="180">
   <col width="180">
   <col width="50">
+  <col width="40">
   <tr>
     <th>Reviewer</th>
     <th>Review</th>
     <th>Rating</th>
+    <th></th>
   </tr>
 
   <% @reviews.each do |review| %>
@@ -19,6 +21,7 @@
       <td><%= review.reviewer %></td>
       <td><%= review.review %></td>
       <td><%= review.rating %></td>
+      <td><%= link_to 'Delete', item_review_path(@item, review), method: :delete, data: { confirm: 'Sure?' } %></td>
     </tr>
   <% end %>
 </table>

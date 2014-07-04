@@ -3,11 +3,13 @@
   <tr>
     <th>Title</th>
     <th></th>
+    <th></th>
   </tr>
 <% @items.each do |item| %>
   <tr>
     <td><%= item.title %></td>
     <td><%= link_to 'Show', item_path(item) %></td>
+    <td><%= link_to 'Delete', item_path(item), method: :delete, data: { confirm: 'Sure?' } %></td>
   </tr>
 <% end %>
 </table>
