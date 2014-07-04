@@ -1,0 +1,25 @@
+<p>
+  <strong>
+    <%= @item.title %>
+  </strong>
+</p>
+
+<table>
+  <tr>
+    <th>Reviewer</th>
+    <th>Review</th>
+    <th>Rating</th>
+  </tr>
+
+  <% @reviews.each do |review| %>
+    <tr>
+      <td><%= review.reviewer %></td>
+      <td><%= review.review %></td>
+      <td><%= review.rating %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to 'New review', new_item_review_path(@item) %>
+</p>
