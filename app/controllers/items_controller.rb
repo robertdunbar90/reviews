@@ -10,6 +10,8 @@ def show
 end
 
 def new
+  @item = Item.new
+  @item.reviews.build
 end
 
 def create
@@ -22,7 +24,6 @@ end
   private
 
     def item_params
-      params.require(:item).permit(:title)
+      params.require(:item).permit(:title, reviews_attributes: [:reviewer, :review, :rating])
     end
-
 end

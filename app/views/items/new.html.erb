@@ -1,8 +1,27 @@
-<%= form_for :item, url: items_path do |f| %>
+<%= form_for @item, url: items_path do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
+
+  <%= f.fields_for :reviews do |g| %>
+
+    <p>
+      <%= g.label :reviewer %><br>
+      <%= g.text_field :reviewer %>
+    </p>
+
+    <p>
+      <%= g.label :review %><br>
+      <%= g.text_field :review %>
+    </p>
+
+    <p>
+      <%= g.label :rating %><br>
+      <%= g.text_field :rating %>
+    </p>
+
+  <% end %>
 
   <p>
     <%= f.submit %>
