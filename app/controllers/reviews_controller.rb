@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, only: :destroy
 
   def new
     @item = Item.find(params[:item_id])
