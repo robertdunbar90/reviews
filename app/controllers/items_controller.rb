@@ -29,6 +29,9 @@ class ItemsController < ApplicationController
     redirect_to items_path
   end
 
+  def about
+  end
+
   private
 
     def item_params

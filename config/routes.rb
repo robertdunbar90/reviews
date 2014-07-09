@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  get '/about', to: 'items#about'
+
   root 'items#index'
 
   # You can have the root of your site routed with "root"
