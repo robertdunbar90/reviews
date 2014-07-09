@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, only: :destroy
 
   def index
-    @items = Item.order(:title)
+    @items = Item.order(:title).page(params[:page])
   end
 
   def show
