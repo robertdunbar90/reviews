@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   root 'items#index'
 
+  get "/sitemap.:format", :to => 'items#sitemap'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

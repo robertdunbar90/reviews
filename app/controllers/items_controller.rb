@@ -32,6 +32,10 @@ class ItemsController < ApplicationController
   def about
   end
 
+  def sitemap
+    @items = Item.all
+  end
+
   private
 
     def item_params
