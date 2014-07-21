@@ -1,6 +1,6 @@
 <%= form_for @item, url: items_path do |f| %>
   <p>
-    <%= f.label :title %><br>
+    <%= f.label 'Subject' %><br>
     <%= f.text_field :title %>
   </p>
 
@@ -24,6 +24,6 @@
   <% end %>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit 'Add review' %>
   </p>
 <% end %>
