@@ -1,5 +1,11 @@
 <%= form_for [@item, @review], url: item_reviews_path do |f| %>
   <p>
+    <strong>
+      <%= @item.title %>
+    </strong>
+  </p>
+
+  <p>
     <%= f.label :reviewer %><br>
     <%= f.text_field :reviewer %>
   </p>

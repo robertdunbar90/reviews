@@ -2,12 +2,14 @@
   <col width="200">
   <tr>
     <th>Title</th>
+    <th>Count</th>
     <th></th>
     <th></th>
   </tr>
 <% @items.each do |item| %>
   <tr>
     <td><%= item.title %></td>
+    <td><%= item.reviews.length %></td>
     <td><%= link_to 'Show', item_path(item) %></td>
     <td><%= link_to 'Delete', item_path(item), method: :delete, data: { confirm: 'Sure?' } %></td>
   </tr>
